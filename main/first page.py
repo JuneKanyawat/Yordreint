@@ -16,10 +16,8 @@ label1.place(x = 0, y = 0)
 frame1 = Frame(root, background="white", highlightthickness=1,width=1000, height=600, bd= 0)
 frame1.place(relx=0.5,rely=0.5, anchor=CENTER)
 
-
-label1 = Label(root, text="Yordreint", font=("Courier New", 100),background="white")
+label1 = Label(root, text="Yordreint", font=("Courier New", 140, "bold"),background="white")
 label1.place(relx=0.5, rely=0.27, anchor=CENTER)
-
 
 # Open image 
 pic = Image.open("/Users/Onlyjune/Desktop/Yor/image/washing-machine.png")
@@ -30,7 +28,7 @@ resize = pic.resize((300,300), Image.ANTIALIAS)
 new_pic = ImageTk.PhotoImage(resize)
 
 label2 = Label(root, image=new_pic, background="white")
-label2.place(x=486, y=300)
+label2.place(relx=0.5,rely=0.6, anchor=CENTER)
 
 def click(event):
     print("click")

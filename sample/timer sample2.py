@@ -1,7 +1,9 @@
 from tkinter import *
 import time
 root = Tk()
-root.geometry("350x170")  # width and height of the window
+root.title("Timer")
+root.geometry("300x200")  # width and height of the window
+
 
 def countdown(t):
     
@@ -13,9 +15,7 @@ def countdown(t):
         print(timer, end="\r")
         time.sleep(1)
         t -= 1
-        
     
-
     root.destroy()
 
 
