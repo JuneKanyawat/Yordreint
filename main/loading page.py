@@ -16,9 +16,6 @@ label1.place(x = 0, y = 0)
 frame1 = Frame(root, background="white", highlightthickness=1,width=1000, height=600, bd= 0)
 frame1.place(relx=0.5,rely=0.5, anchor=CENTER)
 
-# for j in range(5):
-#     Label(root, bg="#D9F6FF",width=5,height=3,highlightbackground="blue", highlightthickness=2).place(x=(j + 29) * 12, y=500)
-
 def play_animation():
         for i in range(4):
             k=400
