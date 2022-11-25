@@ -16,20 +16,25 @@ label1.place(x = 0, y = 0)
 frame1 = Frame(root, background="white", highlightthickness=1,width=1000, height=600, bd= 0)
 frame1.place(relx=0.5,rely=0.5, anchor=CENTER)
 
-for j in range(5):
-    Label(root, bg="#D9F6FF",width=4,height=3,highlightbackground="blue", highlightthickness=2).place(x=(j + 29) * 29, y=500)
+# for j in range(5):
+#     Label(root, bg="#D9F6FF",width=5,height=3,highlightbackground="blue", highlightthickness=2).place(x=(j + 29) * 12, y=500)
 
 def play_animation():
         for i in range(4):
-            for j in range(5):
-                Label(root, bg="#79E8FF",width=4,height=3,highlightbackground="blue", highlightthickness=2).place(x=(j + 29) * 29, y=500)
-                sleep(0.2)
+            k=400
+            for j in range(4):
+                Label(root, bg="#79E8FF",width=5,height=3).place(x=(k+100), y=500)
+                sleep(0.3)
                 root.update_idletasks()
+                sleep(0.3) 
+                k+=100
+            Label(root, bg="white",width=60,height=3).place(x=500, y=500)
+            root.update_idletasks()
 
-                Label(root, bg="#D9F6FF",width=4,height=3,highlightbackground="blue", highlightthickness=2).place(x=(j + 29) *29, y=500)
- 
         else:
             root.destroy()
 
+label1 = Label(root, text="Loading", font=("Courier New", 140, "bold"),background="white")
+label1.place(relx=0.5, rely=0.4, anchor=CENTER)
 play_animation()
 root.mainloop()

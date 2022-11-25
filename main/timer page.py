@@ -21,7 +21,7 @@ def countdown(t):
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
-        Label(root, text=timer, bg="white", font=("Courier New", 310)).place(x=175, y=300)
+        Label(root, text=timer, bg="white", font=("Courier New", 310)).place(relx=0.5,rely=0.5, anchor=CENTER)
         root.update()
         print(timer, end="\r")
         time.sleep(1)
