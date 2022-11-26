@@ -1,5 +1,6 @@
 from tkinter import *
 import time
+import random
 from tkinter import ttk
 from time import sleep
 from PIL import ImageTk, Image
@@ -18,6 +19,14 @@ class app:
 
     def click_1(self):
         print("click")
+    
+    def random_ID(self):
+        self.s = "1"
+        for i in range (5):
+            self.r1 = random.randint(0,9)
+            print(self.r1)
+            self.s = self.s + str(self.r1)
+        return self.s
 
     def play_animation(self):
         for i in range(2):
@@ -37,10 +46,32 @@ class app:
     def fourth_page(self):
         self.frame4 = Frame(self.master, background="white", highlightthickness=1,width=1000, height=600, bd= 0)
         self.frame4.place(relx=0.5,rely=0.5, anchor=CENTER)
-        self.label1 = Label(self.frame4, text="Have you put your clothes?", font=("Courier New", 50, "bold"),background="white")
-        self.label1.place(relx=0.5, rely=0.2, anchor=CENTER)
+        self.label1 = Label(self.frame4, text="Have you put your clothes?", font=("Courier New", 20, "bold"),background="white")
+        self.label1.place(relx=0.77, rely=0.25, anchor=CENTER)
+
+        self.my_pic = Image.open("/Users/Onlyjune/Desktop/Yor/image/laundry-basket.png")
+        self.resize = self.my_pic.resize((200,200),Image.ANTIALIAS)
+        self.img = ImageTk.PhotoImage(self.resize)
+        self.label1 = Label(self.frame4, image=self.img, width=200, height=200, background="white")
+        self.label1.place(relx=0.77,rely=0.5, anchor=CENTER)
+
+        self.label1 = Label(self.frame4, text="Add friend :)", font=("Courier New", 35, "bold"),background="white")
+        self.label1.place(relx=0.3, rely=0.15, anchor=CENTER)
+
+        self.label1 = Label(self.frame4, text="Name: Nong Yor", font=("Courier New", 20, "bold"),background="white")
+        self.label1.place(relx=0.3, rely=0.8, anchor=CENTER)
+
+        self.label1 = Label(self.frame4, text="ID: "+self.random_ID(), font=("Courier New", 20, "bold"),background="white")
+        self.label1.place(relx=0.3, rely=0.85, anchor=CENTER)
+
+        self.my_pic2 = Image.open("/Users/Onlyjune/Desktop/Yor/image/qr.png")
+        self.resize2 = self.my_pic2.resize((300,300),Image.ANTIALIAS)
+        self.img2 = ImageTk.PhotoImage(self.resize2)
+        self.label1 = Label(self.frame4, image=self.img2, width=300, height=300)
+        self.label1.place(relx=0.3,rely=0.47, anchor=CENTER)
+
         self.button1=Button(self.frame4, text = "Done", font=("Courier New", 20),height = 3, width = 10, command=self.click_5)
-        self.button1.place(relx=0.8,rely=0.8, anchor=CENTER)
+        self.button1.place(relx=0.77,rely=0.8, anchor=CENTER)
 
             
     def fifth_page(self):
@@ -58,8 +89,8 @@ class app:
             Label(self.frame6, text=timer, bg="white", font=("Courier New", 310)).place(relx=0.5,rely=0.5, anchor=CENTER)
             self.frame6.update()
             print(timer, end="\r")
-            time.sleep(1)
-            t -= 1
+            time.sleep(0.1)
+            t -= 15
         
         self.seventh_page()
 
@@ -67,7 +98,7 @@ class app:
     def sixth_page(self):
         self.frame6 = Frame(self.master, background="white", highlightthickness=1,width=1000, height=600, bd= 0)
         self.frame6.place(relx=0.5,rely=0.5, anchor=CENTER)
-        self.countdown(10)
+        self.countdown(600)
 
     def seventh_page(self):
         self.frame7 = Frame(self.master, background="white", highlightthickness=1,width=1000, height=600, bd= 0)

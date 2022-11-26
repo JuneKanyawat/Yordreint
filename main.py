@@ -9,6 +9,9 @@ class app:
         self.master = master
         self.master.geometry("1280x800")
         #self.master['bg']='green'
+        self.bg = PhotoImage(file = "/Users/Onlyjune/Desktop/Yor/image/bg image.png")
+        self.label1 = Label(self.master, image = self.bg)
+        self.label1.place(x = 0, y = 0)
         self.first_page()
 
     def click(self,event):
