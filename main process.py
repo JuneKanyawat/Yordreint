@@ -58,7 +58,7 @@ class app:
         self.label1 = Label(self.frame4, text="Add friend :)", font=("Courier New", 35, "bold"),background="white")
         self.label1.place(relx=0.3, rely=0.15, anchor=CENTER)
 
-        self.label1 = Label(self.frame4, text="Name: Nong Yor", font=("Courier New", 20, "bold"),background="white")
+        self.label1 = Label(self.frame4, text="Name: น้องหยอด", font=("Courier New", 20, "bold"),background="white")
         self.label1.place(relx=0.3, rely=0.8, anchor=CENTER)
 
         self.label1 = Label(self.frame4, text="ID: "+self.random_ID(), font=("Courier New", 20, "bold"),background="white")

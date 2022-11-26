@@ -87,6 +87,9 @@ class app:
         self.label1 = Label(self.frame3, image=self.img, width=300, height=300)
         self.label1.place(relx=0.78,rely=0.6, anchor=CENTER)
 
+        self.button1=Button(self.frame3, text = "◀ Back ", font=("Courier New", 20),height = 2, width = 6, command=self.second_page)
+        self.button1.place(relx=0.1,rely=0.8, anchor=CENTER)
+
 
 root = Tk()
 app(root)
